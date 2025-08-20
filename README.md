@@ -1,19 +1,30 @@
 
-# IslandWave — ISP Website + Customer Portal (Starter)
+# IslandWave — ISP Website + Customer Portal (Stripe)
 
-This is a Vercel-ready Next.js app for IslandWave with:
-- Public marketing pages (Home, Live, Plans, News, Events, Contact)
-- Simple **sign-in** (email only) that sets a secure cookie (demo)
-- **Customer Portal**: billing placeholder, service-call booking, swag store
-- **Live page** with YouTube embed — replace `YOUR_CHANNEL_ID` in `pages/live.js`
+Vercel-ready Next.js app with:
+- Marketing pages, Live (YouTube), Plans
+- Sign Up → Stripe Checkout subscription
+- Sign In → Customer Portal
+- Billing page with Stripe **Customer Portal** + **Invoice list**
+- Service Call + Swag pages (placeholders)
 
-## One-minute deploy (Vercel)
-1. Create a new Vercel project and upload this folder
-2. Add Environment Variable: `JWT_SECRET` (any long random string)
-3. Deploy
+## Environment Variables (Vercel → Settings → Environment Variables)
+```
+JWT_SECRET=any-long-random-string
+STRIPE_SECRET_KEY=sk_test_xxx
+NEXT_PUBLIC_SITE_URL=https://your-deployment-url.vercel.app
+NEXT_PUBLIC_STRIPE_PRICE_BASIC=price_xxx
+NEXT_PUBLIC_STRIPE_PRICE_PLUS=price_xxx
+NEXT_PUBLIC_STRIPE_PRICE_PRO=price_xxx
+```
+Create Products & Prices in Stripe (recurring monthly) and paste the **Price IDs** above.
+
+## Deploy
+1. Upload this folder to Vercel (New Project → Upload).
+2. Add the env vars above.
+3. Deploy.
+4. Visit `/plans` → `Sign up` → you’ll be redirected to Stripe Checkout (test mode).
 
 ## Notes
-- This starter does **not** include real payments yet. Connect Stripe or your gateway inside `/portal/billing` later.
-- Form submissions (sign-up, service-call) are saved to the browser's `localStorage` for demo purposes.
-- For production, add a database (Supabase) + proper auth (NextAuth/Clerk).
-
+- This starter searches/creates Stripe customers by email. In production, use a real auth system and store the Stripe customer ID in your DB.
+- To accept real payments, activate your Stripe account and switch to live keys.
