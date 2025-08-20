@@ -1,3 +1,11 @@
+// LIVE EMBED SETUP:
+// Replace CHANNEL_ID_HERE with your channel ID (not the @ handle).
+// Temporary handle provided: @Islandwavenet
+// How to get your Channel ID (no coding):
+// 1) Open your channel in a browser while logged in: https://www.youtube.com/@Islandwavenet
+// 2) Click your avatar > Settings > Advanced settings > copy Channel ID.
+// 3) Paste it to replace CHANNEL_ID_HERE below.
+
 
 import Head from 'next/head'
 import Nav from '../components/Nav'
@@ -17,7 +25,7 @@ export default function Live({authed}){
         <div className="card" style={{overflow:'hidden'}}>
           <div style={{position:'relative', paddingBottom:'56.25%', height:0}}>
             <iframe
-              src="https://www.youtube.com/embed/live_stream?channel=YOUR_CHANNEL_ID"
+              src="https://www.youtube.com/embed/live_stream?channel=CHANNEL_ID_HERE"
               title="IslandWave Live"
               style={{position:'absolute', top:0, left:0, width:'100%', height:'100%', border:0}}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
