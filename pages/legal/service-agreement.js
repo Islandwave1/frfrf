@@ -1,0 +1,1 @@
+export default function Page() { return (<div style={padding:'20px'}><h1>Service Agreement</h1><p>Installation, billing, and termination terms...</p></div>); }

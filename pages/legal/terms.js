@@ -1,0 +1,1 @@
+export default function Page() { return (<div style={padding:'20px'}><h1>Terms of Service</h1><p>IslandWave provides services under Canadian regulations...</p></div>); }

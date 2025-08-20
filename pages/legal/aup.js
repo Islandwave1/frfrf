@@ -1,0 +1,1 @@
+export default function Page() { return (<div style={padding:'20px'}><h1>Acceptable Use Policy</h1><p>No unlawful use, spam, or abuse of services...</p></div>); }

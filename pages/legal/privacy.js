@@ -1,0 +1,1 @@
+export default function Page() { return (<div style={padding:'20px'}><h1>Privacy Policy</h1><p>IslandWave complies with PIPEDA and protects your data...</p></div>); }
