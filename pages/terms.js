@@ -1,0 +1,1 @@
+<h1>Terms of Service - IslandWave</h1>
